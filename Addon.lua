@@ -107,10 +107,6 @@ function prototype:SetBinding(text)
 	self.HotKey:SetText(text)
 end
 
-function prototype:SetCooldownTextShown()
-	-- do nothing
-end
-
 function prototype:SetCooldown(remain, duration, usable)
 	if duration and remain and duration > 0 and remain > 0 then
 		local start = GetTime() + remain - duration
