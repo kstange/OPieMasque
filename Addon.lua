@@ -137,7 +137,7 @@ function prototype:SetCooldownTextShown()
 end
 
 function prototype:SetOverlayIconVertexColor()
-	-- do nothing
+	self.OverlayIcon:SetVertexColor(...)
 end
 
 function prototype:SetHighlighted(highlight)
