@@ -1,16 +1,21 @@
---[[--------------------------------------------------------------------
-	OPie Masque
-	Adds Masque skinning support to OPie.
-	Copyright 2013-2018 Phanx. All rights reserved.
-	https://github.com/Phanx/OPieMasque
-----------------------------------------------------------------------]]
+-- 
+-- OPie Masque
+-- Enables Masque to skin Opie Rings
+-- 
+-- Copyright 2022 SimGuy
+-- Copyright 2013-2018 Phanx
+--
+-- Use of this source code is governed by an MIT-style
+-- license that can be found in the LICENSE file or at
+-- https://opensource.org/licenses/MIT.
+--
 
 local SPECIAL_COLOR_ALPHA = 0.75
 -- 0 = invisible, 1 = fully visible, lower it if your skin is ugly
 
 ------------------------------------------------------------------------
 
-assert(OneRingLib and OneRingLib.ext and OneRingLib.ext.OPieUI, "OPie not found")
+assert(OPie and OPie.UI, "OPie not found")
 
 local Masque = LibStub("Masque", true)
 assert(Masque, "Masque not found")
@@ -102,6 +107,10 @@ function prototype:SetBinding(text)
 	self.HotKey:SetText(text)
 end
 
+function prototype:SetCooldownTextShown()
+	-- do nothing
+end
+
 function prototype:SetCooldown(remain, duration, usable)
 	if duration and remain and duration > 0 and remain > 0 then
 		local start = GetTime() + remain - duration
@@ -128,6 +137,10 @@ function prototype:SetCooldownFormattedText(pattern, ...)
 end
 
 function prototype:SetCooldownTextShown()
+	-- do nothing
+end
+
+function prototype:SetOverlayIconVertexColor()
 	-- do nothing
 end
 
@@ -189,7 +202,7 @@ local function CreateIndicator(name, parent, size, ghost)
 	button.NormalTexture = _G[name .. "NormalTexture"] -- border
 
 	-- Overlay icon (???)
-	button.OverlayIcon = button:CreateTexture(nil, "ARTWORK", 1)
+	button.OverlayIcon = button:CreateTexture(nil, "ARTWORK", nil, 1)
 	button.OverlayIcon:SetPoint("BOTTOMLEFT", button, "BOTTOMLEFT", 4, 4)
 
 	-- Outer glow (doesn't seem to do anything?)
@@ -225,4 +238,12 @@ local function CreateIndicator(name, parent, size, ghost)
 	return button
 end
 
-OneRingLib.ext.OPieUI:SetIndicatorConstructor(CreateIndicator)
+local OPieParams = {
+	name="Masque",
+	apiLevel=1,
+	CreateIndicator=CreateIndicator,
+	supportsCooldownNumbers=true,
+	supportsShortLabels=false,
+}
+
+OPie.UI:RegisterIndicatorConstructor("masque", OPieParams)
