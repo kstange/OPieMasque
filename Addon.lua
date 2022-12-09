@@ -81,6 +81,7 @@ function prototype:SetOverlayIcon(texture, w, h, ...) -- not entirely sure what 
 end
 
 function prototype:SetCount(count)
+	print(count)
 	self.Count:SetText(count or "")
 end
 
@@ -136,7 +137,7 @@ function prototype:SetCooldownTextShown()
 	-- do nothing
 end
 
-function prototype:SetOverlayIconVertexColor()
+function prototype:SetOverlayIconVertexColor(...)
 	self.OverlayIcon:SetVertexColor(...)
 end
 
