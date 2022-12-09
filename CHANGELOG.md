@@ -1,3 +1,7 @@
+### Version 10.0.2.0
+
+* Updated for WoW 10.0.2 and Opie Yuzu API
+
 ### Version 7.3.5.0
 
 * Updated for WoW 7.3
