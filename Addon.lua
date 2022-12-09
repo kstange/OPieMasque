@@ -62,6 +62,13 @@ function prototype:SetDominantColor(r, g, b)
 	self.Border:SetShown(2.85 > (r + g + b)) -- don't override skin color if it's white
 	self.Border:SetVertexColor(r, g, b)
 	self.Border:SetAlpha(SPECIAL_COLOR_ALPHA)
+
+	-- Color the Blizzard Cooldown Text
+	cdtext = select(1, self.Cooldown:GetRegions())
+	if cdtext and cdtext.SetTextColor then
+		cdtext:SetTextColor(r, g, b)
+	end
+
 	for i = 1, #self.GlowTextures do
 		self.GlowTextures[i]:SetVertexColor(r, g, b)
 	end
@@ -81,7 +88,6 @@ function prototype:SetOverlayIcon(texture, w, h, ...) -- not entirely sure what 
 end
 
 function prototype:SetCount(count)
-	print(count)
 	self.Count:SetText(count or "")
 end
 
@@ -109,6 +115,14 @@ function prototype:SetBinding(text)
 end
 
 function prototype:SetCooldown(remain, duration, usable)
+	cdtext = select(1, self.Cooldown:GetRegions())
+	local r, g, b
+	if cdtext:GetObjectType() ~= "FontString" then
+		cdtext = nil
+	else
+		r, g, b, _ = cdtext:GetTextColor()
+	end
+
 	if duration and remain and duration > 0 and remain > 0 then
 		local start = GetTime() + remain - duration
 		-- TODO: detect and show loss of control ?
@@ -124,17 +138,27 @@ function prototype:SetCooldown(remain, duration, usable)
 		end
 		self.Cooldown:SetCooldown(start, duration)
 		self.Cooldown:Show()
+		-- Blizzard code just forces the cooldown visible so hide it by making it transparent
+		if cdtext then
+			if ((usable and not self.RechargeTextShown) or (not usable and not self.CooldownTextShown)) then
+				cdtext:SetTextColor(r, g, b, 0)
+			else 
+				cdtext:SetTextColor(r, g, b, 1)
+			end
+		end
 	else
+		-- Revert the transparency of the text when cooldown is over
+		if cdtext then
+			cdtext:SetTextColor(r, g, b, 1)
+		end
 		self.Cooldown:Hide()
 	end
 end
 
-function prototype:SetCooldownFormattedText(pattern, ...)
-	-- do nothing
-end
-
-function prototype:SetCooldownTextShown()
-	-- do nothing
+function prototype:SetCooldownTextShown(cooldownShown, rechargeShown)
+	-- If the Blizzard option Action Bars > Show Numbers for Cooldowns is
+	-- disabled, you won't get anything regardless of what's set here
+	self.CooldownTextShown, self.RechargeTextShown = cooldownShown, rechargeShown
 end
 
 function prototype:SetOverlayIconVertexColor(...)
