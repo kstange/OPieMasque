@@ -2,7 +2,7 @@
 
 You can install this addon from [CurseForge](https://www.curseforge.com/wow/addons/opie-masque "CurseForge") or [WoWInterface](https://www.wowinterface.com/downloads/info22226-OPieMasque.html), with Wago coming soon.
 
-This addon enables [Masque](https://github.com/SFX-WoW/Masque) ([CurseForge](https://www.curseforge.com/wow/addons/masque), [Wago](https://addons.wago.io/addons/masque), [WoWInterface](https://wowinterface.com/downloads/info12097-Masque.html)) to skin OPie ([CurseForge](https://www.curseforge.com/wow/addons/opie), [WowInterface](https://wowinterface.com/downloads/info9094-OPie.html)) rings.  It requires Masque and OPie to function and is exposed in the settings for both Opie (enabling Masque support) and Masque (setting skin configuration).
+This addon enables [Masque](https://github.com/SFX-WoW/Masque) ([CurseForge](https://www.curseforge.com/wow/addons/masque), [Wago](https://addons.wago.io/addons/masque), [WoWInterface](https://wowinterface.com/downloads/info12097-Masque.html)) to skin [OPie](https://www.townlong-yak.com/addons/opie) ([CurseForge](https://www.curseforge.com/wow/addons/opie), [WowInterface](https://wowinterface.com/downloads/info9094-OPie.html)) rings.  It requires Masque and OPie to function and is exposed in the settings for both Opie (enabling Masque support) and Masque (setting skin configuration).
 
 I have not tested this with Classic or Wrath Classic, but if there's enough interest I may accept patches.
 
