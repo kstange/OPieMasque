@@ -2,7 +2,7 @@
 ## Version: 10.0.2.0
 ## Title: OPie Masque
 ## Notes: Enables Masque to skin Opie Rings
-## Author: SimGuy3k, Phanx
+## Author: SimGuy, Phanx
 ## RequiredDeps: Masque, OPie
 
 ## X-License: MIT
