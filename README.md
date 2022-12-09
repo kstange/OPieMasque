@@ -1,4 +1,4 @@
-# About
+# About Opie Masque
 
 You can install this addon from [CurseForge](https://www.curseforge.com/wow/addons/opie-masque "CurseForge") or [WoWInterface](https://www.wowinterface.com/downloads/info22226-OPieMasque.html), with Wago coming soon.
 
