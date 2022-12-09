@@ -1,21 +1,15 @@
-## Interface: 70300
-## Version: @project-version@
-
+## Interface: 100002
+## Version: 10.0.2.0
 ## Title: OPie Masque
-## Notes: Adds Masque skinning support to OPie.
-## Notes-deDE: Ermöglicht die Verwendung der Masque-Skins auf Opie.
-## Notes-esES: Capacita a Masque a cambiar la apariencia de OPie.
-## Notes-esMX: Capacita a Masque a cambiar la apariencia de OPie.
-## Notes-frFR: Accorde à Masque à modifier l'apparence du OPie.
-## Notes-ptBR: Capacita a Masque a alterar a aparência de Opie.
+## Notes: Enables Masque to skin Opie Rings
+## Author: SimGuy3k, Phanx
+## RequiredDeps: Masque, OPie
 
-## Author: Phanx
-## X-Email: addons@phanx.net
-## X-License: All rights reserved
-## X-Website: https://github.com/Phanx/OPieMasque
+## X-License: MIT
+## X-Website: https://github.com/kstange/OPieMasque
+
 ## X-Curse-Project-ID: 55239
 ## X-WoWI-ID: 22226
-
-## Dependencies: Masque, OPie
+## X-Wago-ID: lQNlXONe
 
 Addon.lua
