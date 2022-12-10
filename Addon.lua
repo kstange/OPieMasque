@@ -132,7 +132,7 @@ function prototype:SetCooldown(remain, duration, usable)
 			self.Cooldown:SetDrawSwipe(false)
 		else
 			-- show cooldown time
-			self.Cooldown:SetDrawEdge(false)
+			self.Cooldown:SetDrawEdge(true)
 			self.Cooldown:SetDrawSwipe(true)
 			self.Cooldown:SetSwipeColor(0, 0, 0, 0.8)
 		end
