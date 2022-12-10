@@ -1,3 +1,8 @@
+### Version 10.0.2.1
+
+* Support coloring of cooldowns from Blizzard UI (Show Numbers for Cooldowns from Action Bar settings)
+  * Note that OPie's own Cooldown and Recharge options will hide the built-in cooldown text if disabled.  No cooldown text will be shown at all unless the Blizzard option is enabled.  If using OmniCC, it will add cooldown text to the buttons without regard to Blizzard or OPie settings.
+
 ### Version 10.0.2.0
 
 * Updated for WoW 10.0.2 and Opie Yuzu API
