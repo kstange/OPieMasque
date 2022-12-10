@@ -22,7 +22,6 @@ assert(Masque, "Masque not found")
 
 local id
 local group
-local buttons = {}
 local prototype = {}
 local STATE_USABLE, STATE_NOMANA, STATE_NORANGE, STATE_UNUSABLE = 0, 1, 2, 3
 
@@ -194,14 +193,6 @@ function prototype:SetEquipState(inBags, isEquipped)
 	end
 end
 
-local function Reskin()
-	for _, button in pairs(buttons) do
-		local r, g, b = button.GlowTextures[1]:GetVertexColor()
-		local _, _, _, a = button.Border:GetVertexColor()
-		button.Border:SetVertexColor(r, g, b, a)
-	end
-end
-
 local id = 0
 
 local function CreateIndicator(name, parent, size, ghost)
@@ -251,11 +242,9 @@ local function CreateIndicator(name, parent, size, ghost)
 	-- Let Masque skin it
 	if not group then
 		group = Masque:Group("OPie")
-		Masque:Register("OPie", Reskin)
 	end
 	group:AddButton(button)
 
-	tinsert(buttons, button)
 	return button
 end
 
