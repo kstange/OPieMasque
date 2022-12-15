@@ -9,7 +9,7 @@
 ## X-Website: https://github.com/kstange/OPieMasque
 
 ## X-Curse-Project-ID: 55239
-## X-WoWI-ID: 22226
+## X-WoWI-ID: 26505
 ## X-Wago-ID: lQNlXONe
 
 Addon.lua
