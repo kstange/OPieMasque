@@ -8,7 +8,7 @@
 ## X-License: MIT
 ## X-Website: https://github.com/kstange/OPieMasque
 
-## X-Curse-Project-ID: 55239
+## X-Curse-Project-ID: 737477
 ## X-WoWI-ID: 26505
 ## X-Wago-ID: lQNlXONe
 
