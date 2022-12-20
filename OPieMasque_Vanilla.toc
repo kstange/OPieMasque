@@ -1,0 +1,15 @@
+## Interface: 11403
+## Version: @project-version@
+## Title: OPie Masque
+## Notes: Enables Masque to skin Opie Rings
+## Author: SimGuy, Phanx
+## RequiredDeps: Masque, OPie
+
+## X-License: MIT
+## X-Website: https://github.com/kstange/OPieMasque
+
+## X-Curse-Project-ID: 737477
+## X-WoWI-ID: 26505
+## X-Wago-ID: lQNlXONe
+
+Addon.lua
