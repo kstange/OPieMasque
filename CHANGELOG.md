@@ -1,3 +1,7 @@
+### Version 10.0.2.2
+
+* Add TOCs for supporting Classic Era and Wrath Classic. Testing is not done with Classic clients, so please report issues if you discover any.
+
 ### Version 10.0.2.1
 
 * Support coloring of cooldowns from Blizzard UI (Show Numbers for Cooldowns from Action Bar settings)
