@@ -1,7 +1,7 @@
 ### Version 10.0.5.0
 
-* TOC bump for Retail 10.0.5
-* TOC bump for Wrath Classic 3.4.1
+* Updated for Retail 10.0.5
+* Updated for Wrath Classic 3.4.1
 
 ### Version 10.0.2.2
 
