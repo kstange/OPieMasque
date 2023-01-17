@@ -1,3 +1,8 @@
+### Version 10.0.5.0
+
+* TOC bump for Retail 10.0.5
+* TOC bump for Wrath Classic 3.4.1
+
 ### Version 10.0.2.2
 
 * Add TOCs for supporting Classic Era and Wrath Classic. Testing is not done with Classic clients, so please report issues if you discover any.
