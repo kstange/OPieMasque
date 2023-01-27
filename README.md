@@ -6,7 +6,7 @@ This addon enables [Masque](https://github.com/SFX-WoW/Masque) ([CurseForge](htt
 
 ## Classic Support
 
-I've done very limited testing with Classic Era and Wrath Classic because I don't play them, but users have reported that Opie Masque works as-is.  If you report bugs or submit patches, I'll do my best to address them.
+I've done very limited testing with Classic Era and Wrath Classic because I don't play them, but I believe everything should work. If you report bugs or submit patches, I'll do my best to address them.
 
 ## Licensing Information
 
