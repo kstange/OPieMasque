@@ -1,6 +1,6 @@
-# Version 10.0.5.1
+# Version 10.0.7.0
 
-* No changes
+* Updated for Retail 10.0.7
 
 # Release History
 
