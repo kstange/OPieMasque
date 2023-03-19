@@ -2,8 +2,8 @@
 -- OPie Masque
 -- Enables Masque to skin Opie Rings
 --
--- Copyright 2022 SimGuy
--- Copyright 2013-2018 Phanx
+-- Copyright 2022 - 2023 SimGuy
+-- Copyright 2013 - 2018 Phanx
 --
 -- Use of this source code is governed by an MIT-style
 -- license that can be found in the LICENSE file or at
