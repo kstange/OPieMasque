@@ -1,7 +1,7 @@
--- 
+--
 -- OPie Masque
 -- Enables Masque to skin Opie Rings
--- 
+--
 -- Copyright 2022 SimGuy
 -- Copyright 2013-2018 Phanx
 --
@@ -20,7 +20,6 @@ assert(OPie and OPie.UI, "OPie not found")
 local Masque = LibStub("Masque", true)
 assert(Masque, "Masque not found")
 
-local id
 local group
 local prototype = {}
 local STATE_USABLE, STATE_NOMANA, STATE_NORANGE, STATE_UNUSABLE = 0, 1, 2, 3
@@ -63,7 +62,7 @@ function prototype:SetDominantColor(r, g, b)
 	self.Border:SetAlpha(SPECIAL_COLOR_ALPHA)
 
 	-- Color the Blizzard Cooldown Text
-	cdtext = select(1, self.Cooldown:GetRegions())
+	local cdtext = select(1, self.Cooldown:GetRegions())
 	if cdtext and cdtext.SetTextColor then
 		cdtext:SetTextColor(r, g, b)
 	end
@@ -114,12 +113,12 @@ function prototype:SetBinding(text)
 end
 
 function prototype:SetCooldown(remain, duration, usable)
-	cdtext = select(1, self.Cooldown:GetRegions())
+	local cdtext = select(1, self.Cooldown:GetRegions())
 	local r, g, b
 	if cdtext:GetObjectType() ~= "FontString" then
 		cdtext = nil
 	else
-		r, g, b, _ = cdtext:GetTextColor()
+		r, g, b = cdtext:GetTextColor()
 	end
 
 	if duration and remain and duration > 0 and remain > 0 then
@@ -141,7 +140,7 @@ function prototype:SetCooldown(remain, duration, usable)
 		if cdtext then
 			if ((usable and not self.RechargeTextShown) or (not usable and not self.CooldownTextShown)) then
 				cdtext:SetTextColor(r, g, b, 0)
-			else 
+			else
 				cdtext:SetTextColor(r, g, b, 1)
 			end
 		end
