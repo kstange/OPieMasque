@@ -24,6 +24,8 @@ local group
 local prototype = {}
 local STATE_USABLE, STATE_NOMANA, STATE_NORANGE, STATE_UNUSABLE = 0, 1, 2, 3
 
+local _, _, _, ver = GetBuildInfo()
+
 function prototype:SetIcon(texture)
 	self.Icon:SetTexture(texture)
 end
@@ -251,7 +253,7 @@ local OPieParams = {
 	name="Masque",
 	apiLevel=1,
 	CreateIndicator=CreateIndicator,
-	supportsCooldownNumbers=true,
+	supportsCooldownNumbers=ver >= 30401 and true or false,
 	supportsShortLabels=false,
 }
 
