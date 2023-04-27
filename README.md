@@ -30,7 +30,7 @@ I've done limited testing with Classic Era and Wrath Classic because I don't pla
 
 Thanks to [StormFX](https://github.com/StormFX), the author of Masque, for a ton of feedback and development tips and for creating a logo for the addon.
 
-Thanks to [Phanx](https://github.com/phanx-wow), the original author of the OPie Masque.
+Thanks to [Phanx](https://github.com/phanx-wow), the original author of OPie Masque.
 
 ## Licensing Information
 
