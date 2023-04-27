@@ -26,6 +26,12 @@ If you want this functionality in Classic Era, [OmniCC](https://github.com/tulla
 
 I've done limited testing with Classic Era and Wrath Classic because I don't play them, but I believe everything should work.  If you report bugs or submit patches, I'll do my best to address them.
 
+## Special Thanks
+
+Thanks to [StormFX](https://github.com/StormFX), the author of Masque, for a ton of feedback and development tips and for creating a logo for the addon.
+
+Thanks to [Phanx](https://github.com/phanx-wow), the original author of the OPie Masque.
+
 ## Licensing Information
 
 This code has been forked with permission from the original author Phanx who no longer plays WoW.  The code was listed with a proprietary license in its original location, but has been changed to the more permissive MIT license with permission.
