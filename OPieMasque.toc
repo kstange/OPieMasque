@@ -4,6 +4,7 @@
 ## Notes: Enables Masque to skin Opie Rings
 ## Author: SimGuy, Phanx
 ## RequiredDeps: Masque, OPie
+## IconTexture: Interface\Addons\OPieMasque\Textures\Icon.tga
 
 ## X-License: MIT
 ## X-Website: https://github.com/kstange/OPieMasque
