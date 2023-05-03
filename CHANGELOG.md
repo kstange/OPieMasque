@@ -1,6 +1,6 @@
 # Version 10.1.0.1
 
-* Added the missing icon from @StormFX
+* Added the missing icon from @StormFX for the addon list
 
 # Version 10.1.0.0
 
