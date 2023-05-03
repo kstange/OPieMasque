@@ -1,3 +1,7 @@
+# Version 10.1.0.1
+
+* Added the missing icon from @StormFX
+
 # Version 10.1.0.0
 
 * Updated for Retail 10.1.0
