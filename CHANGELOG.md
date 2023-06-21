@@ -1,11 +1,6 @@
-# Version 10.1.0.1
+# Version 10.1.0.2
 
-* Added the missing icon from @StormFX for the addon list
-
-# Version 10.1.0.0
-
-* Updated for Retail 10.1.0
-* Disabled OPie options for cooldown numbers in Classic Era
+* Updated for Wrath Classic 3.4.2
 
 # Release History
 
