@@ -1,3 +1,7 @@
+# Version 10.1.7.1
+
+* Updated for OPie Zeta API
+
 # Version 10.1.7.0
 
 * Updated for Retail 10.1.7
