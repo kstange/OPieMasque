@@ -1,6 +1,7 @@
 # Version 10.1.7.1
 
-* Updated for OPie Zeta API
+* Added Profession Quality Icon support
+* Updated for OPie Zeta (API version 3)
 
 # Version 10.1.7.0
 
