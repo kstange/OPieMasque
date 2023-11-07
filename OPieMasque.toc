@@ -1,4 +1,4 @@
-## Interface: 100107
+## Interface: 100200
 ## Version: @project-version@
 ## Title: OPie Masque
 ## Notes: Enables Masque to skin Opie Rings
