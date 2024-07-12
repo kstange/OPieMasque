@@ -1,4 +1,4 @@
-## Interface: 11502
+## Interface: 11503
 ## Version: @project-version@
 ## Title: OPie Masque
 ## Notes: Enables Masque to skin Opie Rings
