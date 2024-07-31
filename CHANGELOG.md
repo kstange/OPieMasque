@@ -1,27 +1,13 @@
-# Version 10.2.7.1
+***Note:** OPie is not currently updated for 11.0.0 and seems to be broken for
+many actions. Skinning still works fine, so I'm bumping the version to mark
+OPie Masque as compatible only with the new game version. If the OPie update
+requires any fixes in OPie Masque, I'll get a release out within a day or so
+of the OPie update.*
 
-* Updated TOC for Classic Era 1.15.3
+# Version 11.0.0.0
 
-# Version 10.2.7.0
-
-* Updated TOC for Retail 10.2.7
-
-# Version 10.2.6.1
-
-* Updated TOC for Classic Era 1.15.2
-* Added TOC for Cataclysm Classic 4.4.0
-
-# Version 10.2.6.0
-
-* Updated TOC for Retail 10.2.6
-
-# Version 10.2.5.1
-
-* Updated TOC for Classic Era 1.15.1
-
-# Version 10.2.5.0
-
-* Updated TOC for Retail 10.2.5
+* Updated TOC for Retail 11.0.0
+* Updated TOC for Retail 11.0.2 (Beta)
 
 # Release History
 
