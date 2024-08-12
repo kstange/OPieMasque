@@ -10,9 +10,9 @@ OPie Masque registers as a skin for OPie and should support any skin compatible 
 
 Recharge and cooldown numbers are handled by WoW natively in Retail, Wrath Classic, and Cataclysm Classic, and they will appear on OPie automatically assuming the following conditions are met:
 
-* You are running the Retail, Wrath Classic, or Cataclysm Classic version of the game
-* The WoW option Action Bars > "Show Numbers for Cooldowns" is enabled
-* The OPie options "Show cooldown numbers" or "Show recharge numbers" are enabled (according to your preference)
+- You are running the Retail, Wrath Classic, or Cataclysm Classic version of the game
+- The WoW option Action Bars > "Show Numbers for Cooldowns" is enabled
+- The OPie options "Show cooldown numbers" or "Show recharge numbers" are enabled (according to your preference)
 
 There is currently no option to show the cooldowns in OPie without having them generally enabled for your main Action Bars as well.
 
