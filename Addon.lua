@@ -26,13 +26,13 @@ local STATE_USABLE, STATE_NOMANA, STATE_NORANGE, STATE_UNUSABLE = 0, 1, 2, 3
 
 local _, _, _, ver = GetBuildInfo()
 
-function prototype:SetIcon(texture, aspect)
-	-- Not sure if we need to handle the aspect here
+function prototype:SetIcon(texture, _)
+	-- 2nd argument aspect is not used in our implementation
 	self.Icon:SetTexture(texture)
 end
 
-function prototype:SetIconAtlas(atlas, aspect)
-	-- Not sure if we need to handle the aspect here
+function prototype:SetIconAtlas(atlas, _)
+	-- 2nd argument aspect is not used in our implementation
 	self.Icon:SetAtlas(atlas)
 end
 
@@ -49,7 +49,8 @@ function prototype:SetIconVertexColor(r, g, b)
 	end
 end
 
-function prototype:SetUsable(usable, usableCharge, cd, nomana, norange)
+function prototype:SetUsable(usable, _, cd, nomana, norange)
+	-- 2nd argument usableCharge is not used in this implementation
 	local state = usable and STATE_USABLE or (norange and STATE_NORANGE or (nomana and STATE_NOMANA or STATE_UNUSABLE))
 	if state == self.ustate then return end
 	self.ustate = state
@@ -214,7 +215,8 @@ function prototype:SetQualityOverlay(quality)
 	end
 end
 
-local function CreateIndicator(name, parent, size, ghost)
+local function CreateIndicator(name, parent, size, _)
+	-- 4th argument ghost is not used for our implementation
 	id = id + 1
 	name = name or "OPieSliceButton"..id
 	parent = parent or UIParent
