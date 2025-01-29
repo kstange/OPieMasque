@@ -1,7 +1,8 @@
-## Interface: 40401
+## Interface: 40402, 40401
 ## Version: @project-version@
 ## Title: OPie Masque
 ## Notes: Enables Masque to skin Opie Rings
+## Notes-ruRU: Включает Masque для скина Opie Rings
 ## Notes-zhCN: 使Masque能够为Opie插件更改外观
 ## Author: SimGuy, Phanx
 ## RequiredDeps: Masque, OPie

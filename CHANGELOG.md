@@ -1,18 +1,9 @@
-# Version 11.0.7.0
+# Version 11.1.0.0
 
-- Updated TOC for Retail 11.0.7
-- Updated TOC for Classic Era 1.15.5
-
-# Version 11.0.5.0
-
-- Updated TOC for Retail 11.0.5 (PTR)
-- Updated TOC for Cataclysm Classic 4.4.1 (PTR)
-- Updated TOC for Classic Era 1.15.4
-
-# Version 11.0.0.0
-
-- Updated TOC for Retail 11.0.0
-- Updated TOC for Retail 11.0.2 (Beta)
+- Updated TOC for Retail 11.1.0 (PTR)
+- Updated TOC for Classic Era 1.15.6
+- Updated TOC for Cataclysm Classic 4.4.2 (PTR)
+- Added ruRU (Russian) TOC description from ZamestoTV
 
 # Release History
 
