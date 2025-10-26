@@ -1,4 +1,4 @@
-## Interface: 110205, 110200, 50501, 50500, 40402, 11507
+## Interface: 110207, 110205, 50502, 50501, 40402, 111508
 ## Version: @project-version@
 ## Title: OPie Masque
 ## Notes: Enables Masque to skin Opie Rings

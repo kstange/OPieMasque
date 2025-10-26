@@ -238,8 +238,13 @@ local function CreateIndicator(name, parent, size, _)
 	button.OverlayIcon = button:CreateTexture(nil, "ARTWORK", nil, 1)
 	button.OverlayIcon:SetPoint("BOTTOMLEFT", button, "BOTTOMLEFT", 4, 4)
 
-	-- Profession Overlay icon (Dragonflight only)
-	if ver >= 100000 then
+	-- Profession Overlay icon
+	-- template was renamed and generalized in 11.2.7
+	if ver >= 110207 then
+		button.ProfessionQualityOverlayFrame = CreateFrame("Frame", nil, button, "ActionButtonTextureOverlayTemplate")
+		button.ProfessionQualityOverlayFrame:SetPoint("TOPLEFT", 14, -14)
+        -- template was added in 10.0.0
+	elseif ver >= 100000 then
 		button.ProfessionQualityOverlayFrame = CreateFrame("Frame", nil, button, "ActionButtonProfessionOverlayTemplate")
 		button.ProfessionQualityOverlayFrame:SetPoint("TOPLEFT", 14, -14)
 	end
