@@ -288,7 +288,7 @@ local OPieParams = {
 	name="Masque",
 	apiLevel=3,
 	CreateIndicator=CreateIndicator,
-	supportsCooldownNumbers=ver >= 30401 and true or false,
+	supportsCooldownNumbers=true,
 	supportsShortLabels=false,
 	onParentAlphaChanged=onParentAlphaChanged,
 }
