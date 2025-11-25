@@ -1,3 +1,9 @@
+# Version 11.2.7.1
+
+- Updated TOC for Retail 12.0.0 (Beta)
+- Updated TOC for Burning Crusade Classic 2.5.5 (PTR)
+- Updated TOC for Pandaria Classic 5.5.3 (PTR)
+
 # Version 11.2.7.0
 
 - Fixed profession quality overlay for 11.2.7
