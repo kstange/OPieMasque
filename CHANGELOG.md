@@ -1,3 +1,7 @@
+# Version 12.0.0.0
+
+- Updated TOC for Retail 12.0.1 (Beta)
+
 # Version 11.2.7.1
 
 - Removed Classic Era limitation for showing cooldown numbers since they are fully supported in all game versions
