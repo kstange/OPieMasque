@@ -6,7 +6,7 @@ You can install this addon from [CurseForge](https://www.curseforge.com/wow/addo
 
 ## Configuration and Features
 
-OPie Masque registers as a skin for OPie and should support any skin compatible with Masque.  When no other OPie skins are installed, OPie Masque should become the default skin automatically.  If not, you can change the skin from the OPie addon settings panel under the Appearance section.  You can then choose a Masque skin you have installed from the Masque Skin Settings panel for the OPie group or globally.
+OPie Masque registers as a skin for OPie and should support any skin compatible with Masque. When no other OPie skins are installed, OPie Masque should become the default skin automatically. If not, you can change the skin from the OPie addon settings panel under the Appearance section. You can then choose a Masque skin you have installed from the Masque Skin Settings panel for the OPie group or globally.
 
 Recharge and cooldown numbers are handled by WoW natively and they will appear on OPie automatically assuming the following conditions are met:
 
@@ -19,7 +19,9 @@ There are no separate options for OPie Masque implemented at this time.
 
 ## Classic Support
 
-I've done limited testing with Classic versions because I don't play them, but I believe everything should work.  If you report bugs or submit patches, I'll do my best to address them.
+Classic versions available in the US are fully supported if they are supported by OPie.
+
+I don't play Classic so testing is somewhat limited, but I'll do my best to address bug reports promptly.
 
 ## Special Thanks
 
