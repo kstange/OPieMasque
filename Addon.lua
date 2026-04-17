@@ -71,7 +71,13 @@ function prototype:SetDominantColor(r, g, b)
 	self.Border:SetAlpha(SPECIAL_COLOR_ALPHA)
 
 	-- Color the Blizzard Cooldown Text
-	local cdtext = select(1, self.Cooldown:GetRegions())
+	local cdtext
+	for _, region in ipairs({ self.Cooldown:GetRegions() }) do
+		if region:GetObjectType() == "FontString" then
+			cdtext = region
+			break
+		end
+	end
 	if cdtext and cdtext.SetTextColor then
 		cdtext:SetTextColor(r, g, b)
 	end
@@ -124,9 +130,7 @@ end
 function prototype:SetCooldown(remain, duration, usable)
 	local cdtext = select(1, self.Cooldown:GetRegions())
 	local r, g, b
-	if cdtext:GetObjectType() ~= "FontString" then
-		cdtext = nil
-	else
+	if cdtext then
 		r, g, b = cdtext:GetTextColor()
 	end
 
