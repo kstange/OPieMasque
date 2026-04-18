@@ -1,5 +1,6 @@
 # Version 12.0.5.0
 
+- Fixed an error that could occur with cooldown numbers on buttons (NoShotz, closes #2)
 - Updated TOC for Retail 12.0.5
 - Updated TOC for Pandaria Classic 5.5.4 (PTR)
 
