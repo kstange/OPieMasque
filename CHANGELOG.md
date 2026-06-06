@@ -1,3 +1,7 @@
+# Version 12.0.7.0
+
+- Updated TOC for Retail 12.0.7
+
 # Version 12.0.5.0
 
 - Fixed an error that could occur with cooldown numbers on buttons (NoShotz, closes #2)
