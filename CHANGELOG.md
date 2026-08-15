@@ -1,6 +1,6 @@
 # Version 12.1.0.1
 
-- Updated OPie API for compatibility with version 8.8
+- Updated to OPie API version 4 which handles in-combat Cooldown information in Retail 12.1.0
 
 # Version 12.1.0.0
 
