@@ -1,3 +1,7 @@
+# Version 12.1.0.1
+
+- Updated OPie API for compatibility with version 8.8
+
 # Version 12.1.0.0
 
 - Updated TOC for Retail 12.1.0

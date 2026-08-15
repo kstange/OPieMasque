@@ -136,7 +136,6 @@ function prototype:SetCooldown(remain, duration, usable)
 
 	if duration and remain and duration > 0 and remain > 0 then
 		local start = GetTime() + remain - duration
-		-- TODO: detect and show loss of control ?
 		if usable then
 			-- show recharge time
 			self.Cooldown:SetDrawEdge(true)
@@ -164,6 +163,44 @@ function prototype:SetCooldown(remain, duration, usable)
 		end
 		self.Cooldown:Hide()
 	end
+end
+
+function prototype:SetCooldownDuration(duration, isRecharge)
+	local cdtext = select(1, self.Cooldown:GetRegions())
+	local r, g, b
+	if cdtext then
+		r, g, b = cdtext:GetTextColor()
+	end
+
+	if duration then
+		if isRecharge then
+			-- show recharge time
+			self.Cooldown:SetDrawEdge(true)
+			self.Cooldown:SetDrawSwipe(false)
+		else
+			-- show cooldown time
+			self.Cooldown:SetDrawEdge(true)
+			self.Cooldown:SetDrawSwipe(true)
+			self.Cooldown:SetSwipeColor(0, 0, 0, 0.8)
+		end
+		self.Cooldown:SetCooldownFromDurationObject(duration, true)
+		self.Cooldown:Show()
+		-- Blizzard code just forces the cooldown visible so hide it by making it transparent
+		if cdtext then
+			if ((isRecharge and not self.RechargeTextShown) or (not isRecharge and not self.CooldownTextShown)) then
+				cdtext:SetTextColor(r, g, b, 0)
+			else
+				cdtext:SetTextColor(r, g, b, 1)
+			end
+		end
+	else
+		-- Revert the transparency of the text when cooldown is over
+		if cdtext then
+			cdtext:SetTextColor(r, g, b, 1)
+		end
+		self.Cooldown:Hide()
+	end
+
 end
 
 function prototype:SetCooldownTextShown(cooldownShown, rechargeShown)
@@ -247,10 +284,6 @@ local function CreateIndicator(name, parent, size, _)
 	if ver >= 110207 then
 		button.ProfessionQualityOverlayFrame = CreateFrame("Frame", nil, button, "ActionButtonTextureOverlayTemplate")
 		button.ProfessionQualityOverlayFrame:SetPoint("TOPLEFT", 14, -14)
-        -- template was added in 10.0.0
-	elseif ver >= 100000 then
-		button.ProfessionQualityOverlayFrame = CreateFrame("Frame", nil, button, "ActionButtonProfessionOverlayTemplate")
-		button.ProfessionQualityOverlayFrame:SetPoint("TOPLEFT", 14, -14)
 	end
 
 	-- Outer glow (doesn't seem to do anything?)
@@ -290,7 +323,7 @@ end
 
 local OPieParams = {
 	name="Masque",
-	apiLevel=3,
+	apiLevel=4,
 	CreateIndicator=CreateIndicator,
 	supportsCooldownNumbers=true,
 	supportsShortLabels=false,
