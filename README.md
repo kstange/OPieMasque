@@ -17,6 +17,10 @@ There is currently no option to show the cooldowns in OPie without having them g
 
 There are no separate options for OPie Masque implemented at this time.
 
+## Forever Support
+
+World of Warcraft: Forever has nearly the same interface features as Retail, so it is _fully supported_.
+
 ## Classic Support
 
 Classic versions available in the US are fully supported if they are supported by OPie.
