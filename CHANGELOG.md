@@ -1,3 +1,10 @@
+# Version 12.1.5.0
+
+- Updated to OPie API version 5 which improves secret handling in Retail and Forever
+- Added support for slice labels
+- Updated TOC for Retail 12.1.5 (PTR)
+- Updated TOC for Forever 1.60.1 (beta)
+
 # Version 12.1.0.1
 
 - Updated to OPie API version 4 which handles in-combat Cooldown information in Retail 12.1.0

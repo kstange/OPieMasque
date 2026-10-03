@@ -26,6 +26,8 @@ local STATE_USABLE, STATE_NOMANA, STATE_NORANGE, STATE_UNUSABLE = 0, 1, 2, 3
 
 local _, _, _, ver = GetBuildInfo()
 
+local HAS_SECRETS = ver >= 120000 or (ver >= 16000 and ver < 20000)
+
 function prototype:SetIcon(texture, _)
 	-- 2nd argument aspect is not used in our implementation
 	self.Icon:SetTexture(texture)
@@ -214,19 +216,28 @@ function prototype:SetOverlayIconVertexColor(...)
 end
 
 function prototype:SetHighlighted(highlight)
-	self[highlight and "LockHighlight" or "UnlockHighlight"](self)
+	if HAS_SECRETS then
+		self.Border:SetAlphaFromBoolean(highlight, 1, 0)
+	else
+		self[highlight and "LockHighlight" or "UnlockHighlight"](self)
+	end
 end
 
 function prototype:SetActive(active)
-	self:SetChecked(active)
+	if HAS_SECRETS then
+		self.Flash:SetAlphaFromBoolean(active, self.FlashAlpha, 0)
+	else
+		self:SetChecked(active)
+	end
 end
 
 function prototype:SetOuterGlow(shown)
---	if shown then
---		print("GLOW!", self.Icon:GetTexture()) -- IS THIS EVEN USED?
---	end
 	for i = 1, #self.GlowTextures do
-		self.GlowTextures[i]:SetShown(shown)
+		if HAS_SECRETS then
+			self.GlowTextures[i]:SetAlphaFromBoolean(shown, 1, 0)
+		else
+			self.GlowTextures[i]:SetShown(shown)
+		end
 	end
 end
 
@@ -256,16 +267,20 @@ function prototype:SetQualityOverlay(quality)
 	end
 end
 
-local function CreateIndicator(name, parent, size, _)
-	-- 4th argument ghost is not used for our implementation
+function prototype:SetShortLabel(text)
+	self.Name:SetText(text)
+end
+
+local function CreateIndicator(name, parent, size, nested)
 	id = id + 1
 	name = name or "OPieSliceButton"..id
 	parent = parent or UIParent
 	size = size or 36
 
-	local button = CreateFrame("CheckButton", name, parent, "ActionButtonTemplate")
+	local button = CreateFrame("CheckButton", name, parent, "ActionButtonTemplate,SecureFrameTemplate")
 	button:SetSize(size, size)
 	button:EnableMouse(false)
+
 
 	button.Border        = _G[name .. "Border"] -- highlight
 	button.Cooldown      = _G[name .. "Cooldown"]
@@ -274,6 +289,9 @@ local function CreateIndicator(name, parent, size, _)
 	button.HotKey        = _G[name .. "HotKey"]
 	button.Icon          = _G[name .. "Icon"]
 	button.NormalTexture = _G[name .. "NormalTexture"] -- border
+
+	button.FlashAlpha = nested and 0.6 or 1
+	button.Flash:SetAlpha(button.FlashAlpha)
 
 	-- Overlay icon
 	button.OverlayIcon = button:CreateTexture(nil, "ARTWORK", nil, 1)
@@ -323,10 +341,10 @@ end
 
 local OPieParams = {
 	name="Masque",
-	apiLevel=4,
+	apiLevel=5,
 	CreateIndicator=CreateIndicator,
 	supportsCooldownNumbers=true,
-	supportsShortLabels=false,
+	supportsShortLabels=true,
 	onParentAlphaChanged=onParentAlphaChanged,
 }
 
