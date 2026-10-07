@@ -1,3 +1,7 @@
+# Version 12.1.5.1
+
+- Fixed an issue that prevented OPie rings from opening while in combat
+
 # Version 12.1.5.0
 
 - Updated to OPie API version 5 which improves secret handling in Retail and Forever
