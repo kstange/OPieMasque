@@ -277,7 +277,7 @@ local function CreateIndicator(name, parent, size, nested)
 	parent = parent or UIParent
 	size = size or 36
 
-	local button = CreateFrame("CheckButton", name, parent, "ActionButtonTemplate,SecureFrameTemplate")
+	local button = CreateFrame("CheckButton", name, parent, "ActionButtonTemplate")
 	button:SetSize(size, size)
 	button:EnableMouse(false)
 
