@@ -1,3 +1,7 @@
+# Version 12.1.5.2
+
+- Updated TOC for Retail 12.1.7 (PTR)
+
 # Version 12.1.5.1
 
 - Fixed an issue that prevented OPie rings from opening while in combat
