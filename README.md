@@ -27,6 +27,10 @@ Classic versions available in the US are fully supported if they are supported b
 
 I don't play Classic so testing is somewhat limited, but I'll do my best to address bug reports promptly.
 
+## LLM Policy
+
+LLM ("Generative AI") agents are not used for development of this project and such contributions will not be accepted.
+
 ## Special Thanks
 
 Thanks to [StormFX](https://github.com/StormFX), the author of Masque, for a ton of feedback and development tips and for creating a logo for the addon.
